@@ -1,6 +1,6 @@
 ## 🌃 Cyberdeck
 <img src="logo.png"></img>
-#### ❗ All artwork was created by Nina and is her sole property :
+#### ❗ All artwork was not created by me and is the artist's sole property :
 
 ## 📖 Overview
 A mod manager for cyberpunk 2077, can be used to install, uninstall, and check what mods are installed in the game files.
