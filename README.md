@@ -6,7 +6,7 @@
 A mod manager for cyberpunk 2077, can be used to install, uninstall, and check what mods are installed in the game files.
 
 ## ⚙️ Installation
-Download the latest release, execute the .exe file and enjoy.
+Download the latest release, extract it in a folder, execute the .exe file and enjoy.
 
 ## 🚀 Usage
 The GUI is command line only, everything is made arround the main menu where you can navigate using your keyboard numbers.
