@@ -14,7 +14,7 @@ RESET = "\033[0m"
 LIGHT_PURPLE = "\033[1;35m"
 
 #Paths
-SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+SCRIPT_DIR = os.getcwd()
 MODS_DIR = os.path.join(SCRIPT_DIR, "mods")
 
 #Mod directory setup
