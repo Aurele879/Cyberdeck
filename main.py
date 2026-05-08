@@ -26,7 +26,6 @@ def list_installed_mods(mods_dir):
             nb +=1
     else:
         print(f"{YELLOW}No mods installed.{RESET}")
-    input(f"{YELLOW}Press Enter to continue...{RESET}")
 
 def snipe_files(mod_copy, game_dir):
     try:
@@ -140,11 +139,25 @@ def gui_loop():
                 copy_files(os.path.join(MODS_DIR, os.path.splitext(os.path.basename(chemin_archive))[0]), GAME_DIR)
 
         if choice == "2":
-            pass
-            time.sleep(2)
+            list_installed_mods(MODS_DIR)
+            mod_nb = input("Enter the number of the mod to uninstall: ")
+            if mod_nb.isdigit():
+                mods = [name for name in os.listdir(MODS_DIR) if os.path.isdir(os.path.join(MODS_DIR, name))]
+                mod_path = os.path.join(MODS_DIR, mods[int(mod_nb)])
+                snipe_files(mod_path, GAME_DIR)
+                shutil.rmtree(mod_path)
+                print(f"{GREEN}[Success] Mod uninstalled.{RESET}")
+                time.sleep(2)
+            else:
+                print(f"{RED}[Error] Invalid number. Please select a valid option.{RESET}")
+                time.sleep(2)
+
+                
+            
 
         if choice == "3":
             list_installed_mods(MODS_DIR)
+            input(f"{YELLOW}Press Enter to continue...{RESET}")
 
         if choice == "4":
             print(f"{YELLOW}Exiting the Cyberdeck mod manager.{RESET}")
